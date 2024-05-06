@@ -49,7 +49,10 @@ public class SecurityConfig {
 
 	@Bean
 	public InMemoryUserDetailsManager users() {
-		return new InMemoryUserDetailsManager(User.withUsername("dvega").password("{noop}password").authorities("read").build());
+		return new InMemoryUserDetailsManager(User
+        .withUsername("dvega")
+        .password("{noop}password")
+        .authorities("read").build());
 	}
 
 	@Bean
